@@ -29,3 +29,9 @@ app.post('/api/tasks', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
+app.delete('/api/tasks/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+    tasks = tasks.filter(t => t.id !== id);
+    res.json({ message: 'Task deleted', id });
+});

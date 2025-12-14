@@ -9,16 +9,24 @@
         button { padding: 10px 20px; }
         ul { list-style: none; padding: 0; }
         li { padding: 10px; background: #f0f0f0; margin: 5px 0; border-radius: 5px; }
+        .footer { margin-top: 30px; text-align: center; color: #666; }
     </style>
 </head>
 <body>
-    <h1>Todo App</h1>
+    <h1>Todo App v2.0 🚀</h1>
+    <p><strong>✨ Chào mừng bạn đến với ứng dụng Todo!</strong></p>
+    
     <input type="text" id="taskInput" placeholder="Nhập công việc...">
     <button onclick="addTask()">Thêm</button>
     <ul id="taskList"></ul>
 
+    <div class="footer">
+        <p>🎓 Bài tập Git/GitHub + CI/CD</p>
+        <p>📅 Deploy tự động với Netlify</p>
+    </div>
+
     <script>
-        const API_URL = 'https://project1-todo-app.onrender.com/api/tasks';
+        const API_URL = 'https://project1-todo-backend.onrender.com/api/tasks';
 
         async function loadTasks() {
             const res = await fetch(API_URL);
@@ -44,5 +52,6 @@
 
         loadTasks();
     </script>
+    
 </body>
 </html>
